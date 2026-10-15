@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uplakshya Singh | BTech Biotechnology Student</title>
+<meta name="description" content="Portfolio of Uplakshya Singh, 1st-year BTech Biotechnology student at Lovely Professional University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#eef3f0; --ink:#13302b; --muted:#4d6660; --line:#c5d4ce;
+  --stain:#6a2c8f; --agar:#d9e8e1; --surface:#f8fbf9;
+}
+@media (prefers-color-scheme: dark){
+  :root{--paper:#0f1f1c; --ink:#e4efeb; --muted:#9bb5ad; --line:#2a423c; --stain:#c59ae6; --agar:#173029; --surface:#142824;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.6}
+a{color:var(--stain)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--stain);outline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;margin:0}
+
+/* hero */
+.hero{padding:64px 0 48px;border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1fr 220px;gap:32px;align-items:center}
+h1{font-size:clamp(2.4rem,7vw,4.2rem);font-weight:700;letter-spacing:-.02em}
+.role{margin:14px 0 0;font-size:1.15rem;color:var(--muted);max-width:30em}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{font:600 .95rem "Instrument Sans",sans-serif;padding:12px 20px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);text-decoration:none;cursor:pointer}
+.btn.primary{background:var(--stain);border-color:var(--stain);color:#fff}
+.btn:hover{filter:brightness(1.08)}
+.dish{width:100%;height:auto}
+
+/* sections */
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+h2{font-size:1.7rem;margin-bottom:20px}
+p{margin:0 0 1em;max-width:62ch}
+
+/* education timeline: real sequence, newest first */
+.edu{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--stain)}
+.edu li{position:relative;padding:0 0 26px 18px}
+.edu li:last-child{padding-bottom:0}
+.edu li::before{content:"";position:absolute;left:-30px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--stain)}
+.edu h3{font-size:1.2rem}
+.edu .meta{color:var(--muted);margin:2px 0 0}
+.score{display:inline-block;margin-top:6px;font-weight:600}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.chips li{background:var(--agar);border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-weight:500}
+
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.contact a,.contact div{display:block;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;text-decoration:none;color:var(--ink);overflow-wrap:anywhere}
+.contact a:hover{border-color:var(--stain)}
+.contact small{display:block;color:var(--muted);font-size:.8rem}
+footer{padding:28px 0 48px;color:var(--muted);font-size:.9rem}
+
+/* one-time hero reveal: colonies grow in */
+.colony{transform-box:fill-box;transform-origin:center;animation:grow 1.2s ease-out both}
+.colony:nth-of-type(2){animation-delay:.2s}.colony:nth-of-type(3){animation-delay:.4s}
+.colony:nth-of-type(4){animation-delay:.6s}.colony:nth-of-type(5){animation-delay:.8s}
+@keyframes grow{from{transform:scale(0)}to{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.colony{animation:none}html{scroll-behavior:auto}}
+
+@media (max-width:640px){
+  .hero .wrap{grid-template-columns:1fr}
+  .dish{max-width:160px;order:-1}
+}
+
+/* PDF / print */
+@page{size:A4;margin:14mm}
+@media print{
+  :root{--paper:#fff;--ink:#13302b;--muted:#4d6660;--line:#c5d4ce;--stain:#6a2c8f;--agar:#e6efea;--surface:#fff}
+  body{font-size:12pt;background:#fff}
+  .actions,footer{display:none}
+  .hero{padding:0 0 18px}
+  section{padding:20px 0;break-inside:avoid}
+  .colony{animation:none}
+  a{color:var(--ink);text-decoration:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Uplakshya Singh</h1>
+      <p class="role">BTech Biotechnology student at Lovely Professional University, looking for an entry-level research internship or virtual training program.</p>
+      <div class="actions">
+        <button class="btn primary" onclick="window.print()">Download as PDF</button>
+        <a class="btn" href="#contact">Contact me</a>
+      </div>
+    </div>
+    <svg class="dish" viewBox="0 0 200 200" role="img" aria-label="Petri dish with bacterial colonies">
+      <circle cx="100" cy="100" r="92" fill="var(--agar)" stroke="var(--ink)" stroke-width="3"/>
+      <circle cx="100" cy="100" r="78" fill="none" stroke="var(--line)" stroke-width="2"/>
+      <circle class="colony" cx="72" cy="78" r="13" fill="var(--stain)"/>
+      <circle class="colony" cx="124" cy="68" r="8" fill="var(--stain)" opacity=".8"/>
+      <circle class="colony" cx="132" cy="118" r="16" fill="var(--stain)"/>
+      <circle class="colony" cx="84" cy="130" r="9" fill="var(--stain)" opacity=".8"/>
+      <circle class="colony" cx="104" cy="96" r="5" fill="var(--stain)" opacity=".7"/>
+    </svg>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about">
+    <h2>Professional Summary</h2>
+    <p>Motivated 1st-year BTech Biotechnology student at Lovely Professional University with a strong foundation in cell biology, chemistry, and introductory Python programming. Eager to apply basic wet-lab techniques and bioinformatics tools in an entry-level research internship or virtual training program.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="edu">
+      <li>
+        <h3>BTech, Biotechnology</h3>
+        <p class="meta">Lovely Professional University, Punjab</p>
+        <p class="meta">Currently in 1st year. Expected completion: 2030</p>
+      </li>
+      <li>
+        <h3>Class 12 (Intermediate)</h3>
+        <p class="meta">Wendy High School, Naramau, Kanpur</p>
+        <span class="score">77%</span>
+      </li>
+      <li>
+        <h3>Class 10 (High School)</h3>
+        <p class="meta">Wendy High School, Naramau, Kanpur</p>
+        <span class="score">85%</span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills and Interests</h2>
+    <ul class="chips">
+      <li>Cell biology</li>
+      <li>Chemistry</li>
+      <li>Python (introductory)</li>
+      <li>Basic wet-lab techniques</li>
+      <li>Bioinformatics tools</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:singhuplakshya7@gmail.com"><small>Email</small>singhuplakshya7@gmail.com</a>
+      <a href="tel:+916392997118"><small>Phone</small>+91 63929 97118</a>
+      <a href="https://github.com/singhuplakshya7-commits" target="_blank" rel="noopener"><small>GitHub</small>singhuplakshya7-commits</a>
+      <a href="https://www.linkedin.com/in/uplakshya-singh-24ab34443" target="_blank" rel="noopener"><small>LinkedIn</small>uplakshya-singh</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="yr">2026</span> Uplakshya Singh</div>
+</footer>
+
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
